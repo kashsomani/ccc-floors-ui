@@ -9,8 +9,7 @@
     <div class="flex-1">
       <a
         class="btn btn-ghost normal-case text-xl"
-        href="https://cardanocrocsclub.com"
-        ><img src={logo} alt="" width="200px" /></a
+        href="https://cardanocrocsclub.com"><img src={logo} alt="" /></a
       >
     </div>
     <div class="flex-none">
@@ -25,7 +24,7 @@
     <slot />
   </main>
   <footer
-    class="pt-2 footer items-center p-4 bg-neutral text-neutral-content b-0"
+    class="pt-2 footer items-center sm:px-4 bg-neutral text-neutral-content b-0"
   >
     <div class="grid grid-cols-1 place-items-center text-center">
       <div class="text-center">
@@ -44,5 +43,8 @@
     left: 0;
     bottom: 0;
     width: 100%;
+  }
+  img {
+    @apply w-28 sm:w-40;
   }
 </style>

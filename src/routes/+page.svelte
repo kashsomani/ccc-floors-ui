@@ -59,7 +59,7 @@
 </script>
 
 {#if crocs.length}
-  <div class="overflow-x-auto" in:fade={{ duration: 2000 }}>
+  <div class="" in:fade={{ duration: 2000 }}>
     <table class="table w-full">
       <!-- head -->
       <thead>
@@ -109,26 +109,26 @@
   table {
     table-layout: fixed;
     width: 100%;
-    border-spacing: 5px;
+    border-spacing: 4px;
     border-collapse: separate;
-    @apply bg-base-100 p-4 sm:p-10 sm:mx-2;
+    @apply bg-base-100 m-1 sm:m-3 sm:p-10 sm:mx-2;
   }
   td {
     text-align: center;
     border-radius: 10px;
     background-color: rgb(42, 51, 45);
     font-size: x-small;
-    @apply sm:text-base m-3;
+    @apply sm:text-base m-1 sm:m-3;
   }
   .date {
     font-size: 0.45rem;
-    @apply sm:text-base m-3;
+    @apply sm:text-base m-1 sm:m-3;
   }
   th {
     text-align: center;
     border-radius: 10px;
     font-size: xx-small;
-    @apply m-3 bg-base-100 sm:text-sm;
+    @apply m-1 sm:m-3 bg-base-100 sm:text-sm;
   }
   .best {
     @apply bg-primary;
