@@ -109,9 +109,9 @@
   table {
     table-layout: fixed;
     width: 100%;
-    border-spacing: 10px;
+    border-spacing: 5px;
     border-collapse: separate;
-    @apply bg-base-100 p-10 mx-2;
+    @apply bg-base-100 p-4 sm:p-10 sm:mx-2;
   }
   td {
     text-align: center;
