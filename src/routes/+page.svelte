@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte"
   import logo from "$lib/images/logo.png"
-  const endpoint = "http://localhost:3000"
+  const endpoint = "https://ccc-floor-by-rank-express.vercel.app"
   let crocs = []
   const max = {
     rank: "",
