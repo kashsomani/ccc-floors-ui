@@ -105,8 +105,8 @@
 {/if}
 
 <svelte:head>
-  <title>CCC Floors</title>
-  <meta name="description" content="CCC Floors" />
+  <title>RA Floors</title>
+  <meta name="description" content="RA Floors" />
 </svelte:head>
 
 <style lang="postcss">
