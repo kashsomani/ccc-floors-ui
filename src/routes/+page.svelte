@@ -87,7 +87,7 @@
               <td>{croc.ratio}</td>
             {/if}
 
-            <td>{getDate(croc.date)}</td>
+            <td class="date">{getDate(croc.date)}</td>
           </tr>
         </tbody>
       {/each}
@@ -118,6 +118,10 @@
     border-radius: 10px;
     background-color: rgb(42, 51, 45);
     font-size: x-small;
+    @apply sm:text-base m-3;
+  }
+  .date {
+    font-size: 0.45rem;
     @apply sm:text-base m-3;
   }
   th {
