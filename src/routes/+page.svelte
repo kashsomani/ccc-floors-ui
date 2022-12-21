@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte"
-  import logo from "$lib/images/logo.png"
+  import { fade } from "svelte/transition"
   const endpoint = "https://ccc-floor-by-rank-express.vercel.app"
   let crocs = []
   const max = {
@@ -58,34 +58,37 @@
   }
 </script>
 
-<img src={logo} alt="" width="200px" />
-
 {#if crocs.length}
-  <div class="overflow-x-auto">
+  <div class="overflow-x-auto" in:fade={{ duration: 2000 }}>
     <table class="table w-full">
       <!-- head -->
       <thead>
-        <tr>
-          <th>Rank</th>
+        <tr class="heading">
+          <th>Max Rank</th>
           <th>Rewards</th>
           <th>Floor</th>
-          <th>C4 / ADA</th>
+          <th
+            >C4 / ADA <br />
+            <span class="inf text-primary">(Higher Ratio = Better Value)</span
+            ></th
+          >
           <th>Time last updated</th>
         </tr>
       </thead>
+      <tr><td class="empty" colspan="5" /></tr>
       {#each crocs as croc}
         <tbody>
           <!-- row 1 -->
           <tr>
             <td>{croc.rank}</td>
-            <th>{croc.rewards}</th>
+            <td>{croc.rewards}</td>
             <td>{croc.floor}</td>
             {#if croc.rank == max.rank}
-              <th style="background-color:green;">{croc.ratio}</th>
+              <td class="best">{croc.ratio}</td>
             {:else if croc.rank == min.rank}
-              <th style="background-color:red;">{croc.ratio}</th>
+              <td class="worst">{croc.ratio}</td>
             {:else}
-              <th>{croc.ratio}</th>
+              <td>{croc.ratio}</td>
             {/if}
 
             <td>{getDate(croc.date)}</td>
@@ -95,7 +98,47 @@
     </table>
   </div>
 {/if}
+
 <svelte:head>
-  <title>Home</title>
-  <meta name="description" content="Svelte demo app" />
+  <title>CCC Floors</title>
+  <meta name="description" content="CCC Floors" />
 </svelte:head>
+
+<style lang="postcss">
+  thead {
+    border-bottom: 2px solid white;
+    @apply text-2xl text-primary-content;
+  }
+  table {
+    table-layout: fixed;
+    width: 100%;
+    border-spacing: 10px;
+    border-collapse: separate;
+    @apply bg-base-100 p-10;
+  }
+  td {
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(42, 51, 45);
+    @apply m-3;
+  }
+  th {
+    text-align: center;
+    border-radius: 10px;
+    @apply m-3 bg-base-100;
+  }
+  .best {
+    @apply bg-primary;
+  }
+  .worst {
+    @apply bg-error text-black;
+  }
+  .empty {
+    border-top: 2px solid rgb(42, 51, 45);
+    border-radius: 0;
+    @apply bg-base-100;
+  }
+  .inf {
+    font-size: xx-small;
+  }
+</style>
