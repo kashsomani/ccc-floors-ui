@@ -15,7 +15,7 @@
     <div class="flex-none">
       <ul class="menu menu-horizontal px-1">
         <li><a href="/">CCC</a></li>
-        <li><a href="/coming-soon">RA</a></li>
+        <li><a href="/ra">RA</a></li>
         <li><a href="/coming-soon">Babies</a></li>
       </ul>
     </div>

@@ -7,3 +7,6 @@ button {
 button:focus {
   outline: 0;
 }
+.text-croc {
+  color: #a5fa00;
+}

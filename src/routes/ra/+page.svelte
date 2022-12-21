@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte"
   import { fade } from "svelte/transition"
-  const endpoint = "https://ccc-floor-by-rank-express.vercel.app"
+  const endpoint = "https://ccc-floor-by-rank-express.vercel.app/ra"
   let crocs = []
   const max = {
     rank: "",
@@ -46,22 +46,24 @@
     // return dateWithoutOffset
   }
   const rewards = {
-    SE: 200,
-    "1000": 160,
-    "2000": 110,
-    "3000": 78,
-    "4000": 56,
-    "5000": 40,
-    "6000": 30,
-    "7000": 24,
-    "8000": 22,
+    "500": 100,
+    "1000": 80,
+    "2000": 55,
+    "3000": 39,
+    "4000": 28,
+    "5000": 20,
+    "6000": 15,
+    "7000": 12,
+    "8000": 11,
+    "9000": 10,
+    "10000": 10,
   }
 </script>
 
 <div class="hero min-h-16 bg-base-100">
   <div class="hero-content text-center">
     <div class="max-w-md">
-      <h1 class="text-5xl font-bold text-croc">OG COLLECTION</h1>
+      <h1 class="text-5xl font-bold text-croc">RA COLLECTION</h1>
     </div>
   </div>
 </div>
