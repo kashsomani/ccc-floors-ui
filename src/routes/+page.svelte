@@ -67,12 +67,8 @@
           <th>Max Rank</th>
           <th>Rewards</th>
           <th>Floor</th>
-          <th
-            >C4 / ADA <br />
-            <span class="inf text-primary">(Higher Ratio = Better Value)</span
-            ></th
-          >
-          <th>Time last updated</th>
+          <th>C4 / ADA </th>
+          <th>Updated at</th>
         </tr>
       </thead>
       <tr><td class="empty" colspan="5" /></tr>
@@ -107,6 +103,7 @@
 <style lang="postcss">
   thead {
     border-bottom: 2px solid white;
+
     @apply text-2xl text-primary-content;
   }
   table {
@@ -114,18 +111,20 @@
     width: 100%;
     border-spacing: 10px;
     border-collapse: separate;
-    @apply bg-base-100 p-10;
+    @apply bg-base-100 p-10 mx-2;
   }
   td {
     text-align: center;
     border-radius: 10px;
     background-color: rgb(42, 51, 45);
-    @apply m-3;
+    font-size: x-small;
+    @apply sm:text-base m-3;
   }
   th {
     text-align: center;
     border-radius: 10px;
-    @apply m-3 bg-base-100;
+    font-size: xx-small;
+    @apply m-3 bg-base-100 sm:text-sm;
   }
   .best {
     @apply bg-primary;
@@ -137,8 +136,5 @@
     border-top: 2px solid rgb(42, 51, 45);
     border-radius: 0;
     @apply bg-base-100;
-  }
-  .inf {
-    font-size: xx-small;
   }
 </style>
